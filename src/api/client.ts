@@ -17,7 +17,7 @@ const useProxy = false;
 const instance = axios.create({
   baseURL: useProxy ? '/api' : baseURL,
   withCredentials: true,
-  timeout: 5000,  // 5 second timeout to prevent hanging
+  timeout: 15000,  // 5 second timeout to prevent hanging
 });
 
 instance.defaults.headers.common['Cache-Control'] = 'no-store'
